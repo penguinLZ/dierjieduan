@@ -97,8 +97,8 @@
 <!--轮播图-->
 <div id="lunbo">
 	<ul id="one">
-		<li><a href=""><img src="./images/banner.jpg"></a></li>
-		<li><a href=""><img src="./images/banner1.jpg"></a></li>
+		<li class="on"><a href=""><img src="./images/dianp_banner.jpg"></a></li>
+		<li><a href=""><img src="./images/dianp_banner2.jpg"></a></li>
 		<li><a href=""><img src="./images/banner.jpg"></a></li>
 		<li><a href=""><img src="./images/banner1.jpg"></a></li>
 	</ul>
@@ -215,42 +215,23 @@
 </div>
 
 <script src="./js/index.js"></script>
+<script src="./server/node_modules/axios/dist/axios.js"></script>
 <script>
-	/*	轮播图	通过添加 on类*/
-	//1.获取节点
-	const oneLiObj = $('#one li',false);
-	const twoLiObj = $('#two li',false);
-	const prev = $('#left');
-	const next = $('#right');
-	//2.  设置变量
-	let index = 0; // 要出来的图片索引
-    let lastIndex = 0; // 要进去的图片索引
-    let times;  // 定时器返回值
-	//3. 点击 #two
-	twoLiObj.forEach((li, key) => {
-    //   console.log(li);
-      // 3-1 给li绑定点击事件
-      li.onclick = function () {
-        // console.log(this);
-        // 将当前index值给lastIndex
-        // 将当前li对象的key赋值给index
-        lastIndex = index;
-        index = key;
-        change();
-      }
-    });
-
-	// 实现图片切换,设置和取消ac类
-	function change() {
-      // console.log(lastIndex, index);
-      // 取消ol和ul中li有ac类的
-      oneLiObj[lastIndex].className = '';
-      twoLiObj[lastIndex].className = '';
-
-      // 设置当前选中的图片和序列号
-      oneLiObj[index].className = 'on';
-      twoLiObj[index].className = 'on';
-    }
+	class getInfo{
+		baseUsrl = 'http://localhost:3000/info';
+		constructor(){
+			//获取数据
+			this.getDate();
+		}
+		async getDate(){
+			let tesShp = await axios.get(this.baseUsrl);
+			console.log(tesShp);
+			let {status,data,headers} = tesShp;
+			// console.log(status,data[0],headers)
+			this.info = data;
+		}
+	}
+	new getInfo;
 </script>
 </body>
 </html>
