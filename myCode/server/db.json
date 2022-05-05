@@ -1,15 +1,18 @@
 {
     "info": [
-      { "id": 1, "title": "商品列表", "author": "typicode" },
-      { "id": 2, "title": "商品列表", "author": "typicode" },
-      { "id": 3, "title": "商品列表", "author": "typicode" },
-      { "id": 4, "title": "商品列表", "author": "typicode" },
-      { "id": 5, "title": "商品列表", "author": "typicode" },
-      { "id": 6, "title": "商品列表", "author": "typicode" },
-      { "id": 7, "title": "商品列表", "author": "typicode" },
-      { "id": 8, "title": "商品列表", "author": "typicode" },
-      { "id": 9, "title": "商品列表", "author": "typicode" },
-      { "id": 10, "title": "商品列表", "author": "typicode" }
+      { 
+        "id": 1,
+        "title": "苹果手机iPhone6(32G)全网",
+        "price": "¥ 4999 .00" ,
+        "src": "images/te_se_shangp_da.jpg"
+      },
+      { 
+        "id": 2,
+        "title": "海尔(Haier) BCD452WDPF 452",
+        "price": "¥ 506 .00" ,
+        "src": "images/tes_shangp_xiao.jpg"
+      }
+      
     ],
     "comments": [
       { "id": 1, "body": "some comment", "postId": 1 }

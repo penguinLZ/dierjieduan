@@ -316,13 +316,45 @@ position: absolute;
 
 .nav-img{height:10px;width:100%;position:absolute;top:40px;}
 
-
+/*倒计时*/
+.countdown-hd{
+	padding-top: 30px;
+	width: 100%;
+	height: 170px;
+	text-align: center;
+	color:rgba(242, 237, 106, 0.919);
+	background-color: #2587c5;
+	background-image: url(../images/daojishibejing.webp);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.countdown-hd h3 {
+	font-size: 40px;
+}
+.hd_countdown {
+	margin-top: 40px;
+	font-size: 24px;
+} 
+.hd_countdown strong {
+	font-size: 30px;
+}
+.hd_countdown .timer{
+	margin-top: 30px;
+}
+.hd_countdown span input{
+	font-size: 18px;
+	background-color: rgba(0,0,0,0);
+	border: none;
+	text-align: center;
+	width: 30px;
+	color: wheat;
+}
 /*轮播图左边当行蓝*/
 .dd-inner{
-	height:451px;
+	height: 520px;
 	background:rgba(0,0,0,0.5);
 	width:240px;/* margin-top:5px;*/
-	margin-left:0px; position: relative; z-index: 2;  
+	margin-left:0px; position: absolute; z-index: 99;  
 	zoom: 1;
 }
 .dd-inner .item{height:64.4px;color:#fff;line-height:31px; position:relative; z-index: 100; background:rgba(0,0,0,0.4); ;
@@ -398,14 +430,14 @@ position: absolute;
 	height: 40px;
 	z-index: 6;
 }
-#one{height:451px; position: relative; margin-left: -960px; left: 50%;}
+#one{height:520px; position: relative; margin-left: -960px; left: 50%;}
 #one li{ opacity: 0;
 	position: absolute;
 	left: 0;
 	top: 0;
 	z-index: 0;
 	transition: opacity 1s;}
-#one li img{width: 1920px;height: 451px;}
+#one li img{width: 1920px;height: 520px;}
 #one .on{width:720px;  z-index: 5;
 	opacity: 1;}
 #two .on{background:red; width: 20px;border-radius: 5px;}
@@ -431,8 +463,8 @@ position: absolute;
 
 .slider-page{display:none;}
 .slider-page a{display:block;width:28px;height:62px;line-height:62px;background: rgba(0,0,0,.2);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#32000000, endColorstr=#32000000);color: #fff;text-align: center;font-size: 22px;font-weight: 400;margin-top: -31px;font-family: simsun;}
-#left{position:absolute;left:50px;top:215px;}
-#right{position:absolute;right:50px;top:215px;}
+#left{position:absolute;left:50px;top:215px;z-index: 99;}
+#right{position:absolute;right:50px;top:215px;z-index: 99;}
 #lunbo:hover .slider-page{display:block;}          
 
 

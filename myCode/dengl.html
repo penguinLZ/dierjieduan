@@ -50,8 +50,8 @@
 			</div>
 			<div class="kengl_kuang">
 				<div class="txt_kuang">
-					<input type="text" class="itxt"  placeholder="邮箱/用户名/已验证手机">
-					<input type="text" class="itxt"  placeholder="密码">
+					<input type="text" class="itxt" autocomplete="on" name="uname" id="uname" placeholder="邮箱/用户名/已验证手机" value="admin">
+					<input type="password" class="itxt" autocomplete="on" name="password" id="password" placeholder="密码" value="123456">
 				</div>
 				<div class="remember">
 					<div class="fl">
@@ -62,7 +62,7 @@
 						<a href="#" class="fl" target="_blank" title="忘记密码">忘记密码?</a> 
 					</div>
 				</div>
-				<input type="button" tabindex="5" value="登 录" class="btnnuw">
+				<input type="button" id="denglu" tabindex="5" value="登 录" class="btnnuw">
 			</div>
 			<div class="corp_login">
 				<div class="mingb_shoq"><a href="#">名榜授权登录！</a></div>
@@ -79,6 +79,9 @@
 		<p class="gonga_bei">京公网安备：11010602030054号</p> 
 	</div>
 </div>
-
+<script src="./node_modules/axios/dist/axios.js"></script>
+<script src="./js/login.js"></script>
+<script src="./lib/jquery-2.2.4.js"></script>
+<script src="./lib/layer/layer.js"></script>
 </body>
 </html>
